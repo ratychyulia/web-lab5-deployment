@@ -1,9 +1,0 @@
-@import "tailwindcss";
-
-/* Темна тема вмикається класом .dark на <html> */
-@custom-variant dark (&:where(.dark, .dark *));
-
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-}
