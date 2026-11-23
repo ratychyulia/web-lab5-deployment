@@ -2,7 +2,7 @@
     --page-bg: #f8f9fa;
     --container-bg: #ffffff;
     --text: #333333;
-    --heading: #1e3a8a;
+    --heading: #065f46;
     --border: #dddddd;
     --card-bg: #f4f6f8;
     --muted: #6c757d;
@@ -13,7 +13,7 @@ html[data-theme="dark"] {
     --page-bg: #0f1216;
     --container-bg: #1a1e24;
     --text: #dde1e6;
-    --heading: #9cc3e8;
+    --heading: #6ee7b7;
     --border: #353b44;
     --card-bg: #232830;
     --muted: #98a2ad;
@@ -43,7 +43,7 @@ body {
 #main-header {
     padding: 20px;
     margin-bottom: 20px;
-    border-bottom: 2px solid #2563eb;
+    border-bottom: 2px solid #059669;
     position: relative;
 }
 
@@ -69,7 +69,7 @@ body {
 .card {
     padding: 18px 22px;
     border: 1px solid var(--border);
-    border-left: 4px solid #2563eb;
+    border-left: 4px solid #059669;
     border-radius: 6px;
     background-color: var(--card-bg);
 }
@@ -83,7 +83,7 @@ body {
     padding: 14px;
     text-align: center;
     color: #fff;
-    background-color: #1e3a8a;
+    background-color: #065f46;
     border-radius: 6px;
 }
 
@@ -144,9 +144,9 @@ body {
 }
 .btn {
     padding: 8px 16px;
-    border: 1px solid #2563eb;
+    border: 1px solid #059669;
     border-radius: 6px;
-    background: #2563eb;
+    background: #059669;
     color: #fff;
     font: inherit;
     cursor: pointer;
@@ -157,9 +157,22 @@ body {
     color: var(--heading);
 }
 
-a { color: #2563eb; }
-html[data-theme="dark"] a { color: #9cc3e8; }
+a { color: #059669; }
+html[data-theme="dark"] a { color: #6ee7b7; }
 
 @media (max-width: 700px) {
     .content { grid-template-columns: 1fr; }
+}
+
+/* ЛР5: бейдж розгортання */
+.deploy-badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: #059669;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
