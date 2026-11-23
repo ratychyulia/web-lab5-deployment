@@ -1,13 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Резюме Ратич — React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме — Ратич Юлія</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header id="main-header">
+            <div class="header-toolbar">
+                <button type="button" id="theme-toggle" class="btn btn-outline" aria-pressed="false">Темна тема</button>
+            </div>
+            <h1>Ратич Юлія</h1>
+            <p class="contact">Спеціальність: Кібербезпека (Група КБ-201)</p>
+            <p class="contact">email: <a href="mailto:ratychyulia@gmail.com">ratychyulia@gmail.com</a></p>
+            <p class="contact">GitHub: <a href="https://github.com/ratychyulia" target="_blank">github.com/ratychyulia</a></p>
+        </header>
+
+        <main class="content">
+            <section class="card">
+                <h2>Навички</h2>
+                <ul>
+                    <li>Мови програмування: Python, C++, C#</li>
+                    <li>Мережеві технології: Cisco Packet Tracer (VLAN, Routing)</li>
+                    <li>Бази даних: MySQL, SQLite</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>Досвід та проекти</h2>
+                <ul>
+                    <li>Створення аудитів інформаційної безпеки за стандартом ISO/IEC 27001.</li>
+                    <li>Розробка бекенд-додатка на Python (FastAPI).</li>
+                </ul>
+            </section>
+
+            <!-- Розділ для відгуків з сервера -->
+            <section id="reviews" class="card" style="grid-column: 1 / -1;">
+                <h2>Відгуки попередніх роботодавців</h2>
+                <p id="reviews-status" role="status">Завантаження відгуків...</p>
+                <div id="reviews-list"></div>
+            </section>
+        </main>
+
+        <footer id="main-footer">
+            <p>© 2026 | Створено для Лабораторної роботи №4 — Ратич Юлія</p>
+            <div class="system-info">
+                <h3>Інформація з localStorage (ОС та браузер)</h3>
+                <dl id="storage-info" class="storage-list"></dl>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Модальне вікно зворотного зв'язку -->
+    <div id="contact-modal" class="modal-overlay" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <h2 id="modal-title" class="section-title">Зворотний зв'язок</h2>
+            <form action="https://formspree.io/f/mqppdznq" method="POST">
+                <input type="hidden" name="_subject" value="Нове повідомлення з резюме (Лабораторна №4)">
+                
+                <label for="contact-name">Ім'я</label>
+                <input id="contact-name" type="text" name="name" required autocomplete="name">
+                
+                <label for="contact-email">Email</label>
+                <input id="contact-email" type="email" name="email" required autocomplete="email">
+                
+                <label for="contact-phone">Номер телефону</label>
+                <input id="contact-phone" type="tel" name="phone" required autocomplete="tel">
+                
+                <label for="contact-message">Повідомлення</label>
+                <textarea id="contact-message" name="message" rows="4" required></textarea>
+                
+                <div class="modal-actions" style="margin-top: 15px; display: flex; gap: 10px; justify-content: flex-end;">
+                    <button type="submit" class="btn">Надіслати</button>
+                    <button type="button" id="modal-close" class="btn btn-outline">Закрити</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
